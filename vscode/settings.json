@@ -1,0 +1,9 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "Fira Code",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "files.autoSave": "afterDelay",
+    "vsicons.dontShowNewVersionMessage": true,
+    "files.autoSaveDelay": 1000
+}
