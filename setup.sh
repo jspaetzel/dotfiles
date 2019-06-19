@@ -6,5 +6,18 @@ for i in ${FILES[@]}; do
   ln -sf $(pwd)/$i $HOME/$i
 done
 
-# VS Code User Settings
-ln -sf $(pwd)/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+# Run scripts for this particular system
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+if [ "$machine" == "Mac" ]; then 
+    ./setup_mac.sh
+fi
+
+if [ "$machine" == "Linux" ]; then 
+    ./setup_ubuntu.sh
+fi

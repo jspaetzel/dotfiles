@@ -58,6 +58,10 @@ function weather {
 	curl "wttr.in/San Francisco, California"
 }
 
+function weather_short {
+	curl "wttr.in/San Francisco, California?format=3"
+}
+
 alias bashreload='source ~/.bash_profile'
 alias reloadbash='source ~/.bash_profile'
 
