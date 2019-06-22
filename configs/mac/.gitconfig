@@ -2,7 +2,7 @@
 	editor = nano
 [user]
 	signingkey = 8857112C7A7BD94A170EDE3C0F11E952F7720434
-	email = john.spaetzel@hellosign.com
+	email = john.spaetzel@gmail.com
 	name = John Spaetzel
 [commit]
 	gpgsign = true

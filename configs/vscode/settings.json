@@ -6,5 +6,6 @@
     "files.autoSaveDelay": 1000,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "workbench.startupEditor": "welcomePage"
 }
