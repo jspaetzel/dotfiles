@@ -5,6 +5,10 @@ if [ -f ~/.bash_hellosign ]; then
     . ~/.bash_hellosign
 fi
 
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
+
 # Java
 export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
@@ -13,10 +17,6 @@ export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
 alias java7='export JAVA_HOME=$JAVA_7_HOME'
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java9='export JAVA_HOME=$JAVA_9_HOME'
-
-# Set Default Java Version
-export JAVA_HOME=$JAVA_7_HOME
-export PATH="$PATH:$JAVA_HOME"
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
@@ -47,12 +47,13 @@ alias l='ls -CF'
 # set updatedb
 alias updatedb=/usr/libexec/locate.updatedb
 
-# Set env var for slack to enable developer options
-export SLACK_DEVELOPER_MENU=1
-
 # asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+if [ -f ~/.asdf/asdf.sh ]; then
+. ~/.asdf/asdf.sh
+fi
+if [ -f ~/.asdf/completions/asdf.bash ]; then
+. ~/.asdf/completions/asdf.bash
+fi
 
 function weather {
 	curl "wttr.in/San Francisco, California"
