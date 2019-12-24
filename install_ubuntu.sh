@@ -33,14 +33,4 @@ snap install phpstorm --classic
 snap install firefox
 snap install vlc
 snap install inkscape
-
-# Prep for AppImages
-mkdir -p ~/Applications/
-
-# Standard Notes
-cd ~/Applications/
-wget https://github.com/standardnotes/desktop/releases/download/v3.0.14/standard-notes-3.0.14-x86_64.AppImage
-chmod +x standard-notes-3.0.14-x86_64.AppImage
-
-# Foxit PDF Reader
-# wget http://cdn09.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+snap install standard-notes

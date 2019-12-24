@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Basic dotfiles
-FILES=( .bash_profile .profile )
+FILES=( .bash_profile .profile .zprofile )
 for i in ${FILES[@]}; do
   ln -sf $(pwd)/$i $HOME/$i
 done
